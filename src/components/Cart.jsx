@@ -1,8 +1,8 @@
 function Cart({ cartItems }) {
   return (
     <div>
-      {cartItems.map((item, index) => (
-        <p key={index}>{item.name} is in your cart.</p>
+      {cartItems.map((item) => (
+        <p key={item.id}>{item.name} is in your cart.</p>
       ))}
     </div>
   );
