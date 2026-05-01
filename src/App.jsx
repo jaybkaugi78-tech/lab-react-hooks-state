@@ -20,8 +20,7 @@ function App() {
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   const addToCart = (product) => {
-  setCartItems((prev) => [...prev, product]);
-};
+    setCartItems((prev) => [...prev, product]);
   };
 
   return (
@@ -33,14 +32,10 @@ function App() {
         <option value="Fruits">Fruits</option>
         <option value="Bakery">Bakery</option>
       </select>
-      <ProductList
-        products={products}
-        addToCart={addToCart}
-        category={category}
-      />
+      <ProductList products={products} addToCart={addToCart} category={category} />
       <Cart cartItems={cartItems} />
     </div>
   );
-  
+}
 
 export default App;
