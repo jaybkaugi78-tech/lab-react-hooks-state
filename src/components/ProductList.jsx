@@ -8,9 +8,13 @@ function ProductList({ products, addToCart, category }) {
 
   return (
     <div>
-      {filtered.map((product) => (
-        <ProductCard key={product.id} product={product} addToCart={addToCart} />
-      ))}
+      {filtered.length === 0 ? (
+        <p>No products available.</p>
+      ) : (
+        filtered.map((product) => (
+          <ProductCard key={product.id} product={product} addToCart={addToCart} />
+        ))
+      )}
     </div>
   );
 }
